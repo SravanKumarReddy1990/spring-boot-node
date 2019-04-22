@@ -44,48 +44,48 @@ public class HelloServlet extends HttpServlet {
    		out.print(obj.toString());  
             }
 while ( rs1.next() ) {
-                String description = rs.getString("description");
-		String geom = rs.getString("geom");
+                String description = rs1.getString("description");
+		String geom = rs1.getString("geom");
                 JSONObject obj=new JSONObject();    
   		obj.put("description",description);    
   		obj.put("geom",geom);       
    		out.print(obj.toString());  
             }
 while ( rs2.next() ) {
-                String description = rs.getString("description");
-		String geom = rs.getString("geom");
+                String description = rs2.getString("description");
+		String geom = rs2.getString("geom");
                 JSONObject obj=new JSONObject();    
   		obj.put("description",description);    
   		obj.put("geom",geom);       
    		out.print(obj.toString());  
             }
 while ( rs3.next() ) {
-                String description = rs.getString("description");
-		String geom = rs.getString("geom");
+                String description = rs3.getString("description");
+		String geom = rs3.getString("geom");
                 JSONObject obj=new JSONObject();    
   		obj.put("description",description);    
   		obj.put("geom",geom);       
    		out.print(obj.toString());  
             }
 while ( rs4.next() ) {
-                String description = rs.getString("description");
-		String geom = rs.getString("geom");
+                String description = rs4.getString("description");
+		String geom = rs4.getString("geom");
                 JSONObject obj=new JSONObject();    
   		obj.put("description",description);    
   		obj.put("geom",geom);       
    		out.print(obj.toString());  
             }
 while ( rs5.next() ) {
-                String description = rs.getString("description");
-		String geom = rs.getString("geom");
+                String description = rs5.getString("description");
+		String geom = rs5.getString("geom");
                 JSONObject obj=new JSONObject();    
   		obj.put("description",description);    
   		obj.put("geom",geom);       
    		out.print(obj.toString());  
             }
 while ( rs6.next() ) {
-                String description = rs.getString("description");
-		String geom = rs.getString("geom");
+                String description = rs6.getString("description");
+		String geom = rs6.getString("geom");
                 JSONObject obj=new JSONObject();    
   		obj.put("description",description);    
   		obj.put("geom",geom);       
