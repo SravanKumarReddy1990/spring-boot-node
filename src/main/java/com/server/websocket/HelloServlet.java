@@ -35,7 +35,7 @@ public class HelloServlet extends HttpServlet {
   ResultSet rs4= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"Tirunelveli_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
   ResultSet rs5= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"TUTICORIN_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
   ResultSet rs6= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"VELLORE_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
-out.println("queries executed")
+out.println("queries executed");
             while ( rs.next() ) {
                 String description = rs.getString("description");
 		String geom = rs.getString("geom");
