@@ -32,7 +32,7 @@ out.println("before queries executed");
             ResultSet rs= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"THIRUVARUR_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("1queries executed");
   ResultSet rs1= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"VILLPURAM_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("2queries executed");
   ResultSet rs2= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"TIRUVELLORE_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("3queries executed");
-  ResultSet rs3= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"THIRUVANNAMALAI_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("4queries executed");
+ // ResultSet rs3= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"THIRUVANNAMALAI_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("4queries executed");
   ResultSet rs4= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"Tirunelveli_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("5queries executed");
   ResultSet rs5= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"TUTICORIN_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("6queries executed");
   ResultSet rs6= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"VELLORE_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
@@ -61,14 +61,14 @@ out.println("queries executed");
   		obj.put("geom",geom);       
    		out.print(obj.toString());  
             }
-	while ( rs3.next() ) {
-                String description = rs3.getString("description");
-		String geom = rs3.getString("geom");
-                JSONObject obj=new JSONObject();
-  		obj.put("description",description);
-  		obj.put("geom",geom);
-   		out.print(obj.toString());
-            }
+	//while ( rs3.next() ) {
+        //        String description = rs3.getString("description");
+	//	String geom = rs3.getString("geom");
+        //        JSONObject obj=new JSONObject();
+  	//	obj.put("description",description);
+  	//	obj.put("geom",geom);
+   	//	out.print(obj.toString());
+           // }
 	while ( rs4.next() ) {
                 String description = rs4.getString("description");
 		String geom = rs4.getString("geom");
