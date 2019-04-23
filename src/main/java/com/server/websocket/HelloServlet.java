@@ -28,14 +28,20 @@ public class HelloServlet extends HttpServlet {
             String url = "jdbc:postgresql://ec2-174-129-10-235.compute-1.amazonaws.com:5432/daa2h5bidd8sco";
             Connection conn = 							DriverManager.getConnection(url,"zpuyymbaveuprf","2e6978c5c36ba71b91e94210d6f3f9316282d26cf2168ea759c1ff2bbf875317");
             Statement stmt = conn.createStatement();
+Statement stmt1 = conn.createStatement();
+Statement stmt2 = conn.createStatement();
+//Statement stmt3 = conn.createStatement();
+Statement stmt4 = conn.createStatement();
+Statement stmt5 = conn.createStatement();
+Statement stmt6 = conn.createStatement();
 out.println("before queries executed");
             ResultSet rs= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"THIRUVARUR_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("1queries executed");
-  ResultSet rs1= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"VILLPURAM_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("2queries executed");
-  ResultSet rs2= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"TIRUVELLORE_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("3queries executed");
- // ResultSet rs3= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"THIRUVANNAMALAI_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("4queries executed");
-  ResultSet rs4= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"Tirunelveli_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("5queries executed");
-  ResultSet rs5= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"TUTICORIN_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("6queries executed");
-  ResultSet rs6= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"VELLORE_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
+  ResultSet rs1= stmt1.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"VILLPURAM_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("2queries executed");
+  ResultSet rs2= stmt2.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"TIRUVELLORE_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("3queries executed");
+ // ResultSet rs3= stmt3.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"THIRUVANNAMALAI_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("4queries executed");
+  ResultSet rs4= stmt4.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"Tirunelveli_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("5queries executed");
+  ResultSet rs5= stmt5.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"TUTICORIN_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");out.println("6queries executed");
+  ResultSet rs6= stmt6.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"VELLORE_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
 out.println("queries executed");
             while ( rs.next() ) {
                 String description = rs.getString("description");
