@@ -28,6 +28,7 @@ public class HelloServlet extends HttpServlet {
             String url = "jdbc:postgresql://ec2-174-129-10-235.compute-1.amazonaws.com:5432/daa2h5bidd8sco";
             Connection conn = 							DriverManager.getConnection(url,"zpuyymbaveuprf","2e6978c5c36ba71b91e94210d6f3f9316282d26cf2168ea759c1ff2bbf875317");
             Statement stmt = conn.createStatement();
+out.println("before queries executed");
             ResultSet rs= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"THIRUVARUR_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
   ResultSet rs1= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"VILLPURAM_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
   ResultSet rs2= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"TIRUVELLORE_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
