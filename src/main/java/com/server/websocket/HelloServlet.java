@@ -93,11 +93,11 @@ out.println("queries executed");
   		obj.put("geom",geom);
    		out.print(obj.toString());
             }
-            conn.close();
         } catch (Exception e) {
             out.println("Got an exception! ");
             out.println(e.getMessage());
         }
+            conn.close();
     }
 
 }
