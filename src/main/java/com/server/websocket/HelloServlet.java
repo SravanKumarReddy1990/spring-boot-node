@@ -35,6 +35,7 @@ public class HelloServlet extends HttpServlet {
   ResultSet rs4= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"Tirunelveli_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
   ResultSet rs5= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"TUTICORIN_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
   ResultSet rs6= stmt.executeQuery("SELECT description,ST_AsText(geom) as geom FROM \"VELLORE_RV\" where ST_Within(ST_GeomFromText('POINT("+lat+" "+lon+")',4326),geom)");
+out.println("queries executed")
             while ( rs.next() ) {
                 String description = rs.getString("description");
 		String geom = rs.getString("geom");
@@ -62,34 +63,34 @@ public class HelloServlet extends HttpServlet {
 	while ( rs3.next() ) {
                 String description = rs3.getString("description");
 		String geom = rs3.getString("geom");
-                JSONObject obj=new JSONObject();    
-  		obj.put("description",description);    
-  		obj.put("geom",geom);       
-   		out.print(obj.toString());  
+                JSONObject obj=new JSONObject();
+  		obj.put("description",description);
+  		obj.put("geom",geom);
+   		out.print(obj.toString());
             }
 	while ( rs4.next() ) {
                 String description = rs4.getString("description");
 		String geom = rs4.getString("geom");
-                JSONObject obj=new JSONObject();    
-  		obj.put("description",description);    
-  		obj.put("geom",geom);       
-   		out.print(obj.toString());  
+                JSONObject obj=new JSONObject();
+  		obj.put("description",description);
+  		obj.put("geom",geom);
+   		out.print(obj.toString());
             }
 	while ( rs5.next() ) {
                 String description = rs5.getString("description");
 		String geom = rs5.getString("geom");
-                JSONObject obj=new JSONObject();    
-  		obj.put("description",description);    
-  		obj.put("geom",geom);       
-   		out.print(obj.toString());  
+                JSONObject obj=new JSONObject();
+  		obj.put("description",description);
+  		obj.put("geom",geom);
+   		out.print(obj.toString());
             }
 	while ( rs6.next() ) {
                 String description = rs6.getString("description");
 		String geom = rs6.getString("geom");
-                JSONObject obj=new JSONObject();    
-  		obj.put("description",description);    
-  		obj.put("geom",geom);       
-   		out.print(obj.toString());  
+                JSONObject obj=new JSONObject();
+  		obj.put("description",description);
+  		obj.put("geom",geom);
+   		out.print(obj.toString());
             }
             conn.close();
         } catch (Exception e) {
