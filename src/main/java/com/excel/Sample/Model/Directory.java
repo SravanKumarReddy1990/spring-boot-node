@@ -1,7 +1,7 @@
 package com.excel.Sample.Model;
 
 import java.util.Date;
-
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +12,7 @@ import com.excel.Sample.ExcelAnn.ExcelColumn;
 
 @Entity
 @Table(name = "directory")
-public class Directory {
+public class Directory  implements Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name = "id")
