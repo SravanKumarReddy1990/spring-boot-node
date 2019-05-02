@@ -6,7 +6,7 @@
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.password">2e6978c5c36ba71b91e94210d6f3f9316282d26cf2168ea759c1ff2bbf875317</property>
-        <property name="hibernate.connection.url">postgres://zpuyymbaveuprf:2e6978c5c36ba71b91e94210d6f3f9316282d26cf2168ea759c1ff2bbf875317@ec2-174-129-10-235.compute-1.amazonaws.com:5432/daa2h5bidd8sco</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://ec2-174-129-10-235.compute-1.amazonaws.com:5432/daa2h5bidd8sco</property>
         <property name="hibernate.connection.username">zpuyymbaveuprf</property>
         
     </session-factory>
