@@ -10,6 +10,26 @@
     <tomcat.version>8.5.23</tomcat.version>
   </properties>
   	<dependencies>
+
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.4.2.Final</version>
+</dependency>
+<dependency>
+	<groupId>com.excel.Sample.ExcelAnn</groupId>
+	<artifactId>example-app</artifactId>
+	<version>1.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/excelannotation.jar</systemPath>
+</dependency>
+<dependency>
+    <groupId>commons-fileupload</groupId>
+    <artifactId>commons-fileupload</artifactId>
+    <version>1.3</version>
+</dependency>
+
+  	
 <dependency>
     <groupId>com.google.code.gson</groupId>
     <artifactId>gson</artifactId>
@@ -19,17 +39,6 @@
     <groupId>org.json</groupId>
     <artifactId>json</artifactId>
     <version>20180813</version>
-</dependency>
-
-<repository>
-    <id>in-project</id>
-    <name>In Project Repo</name>
-    <url>${project.basedir}/src/main/webapp/WEB-INF/lib</url>
-</repository>
-<dependency>
-    <groupId>service-sdk</groupId>
-    <artifactId>service-sdk</artifactId>
-    <version>0.0.1</version>
 </dependency>
 
 <dependency>
