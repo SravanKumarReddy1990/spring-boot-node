@@ -21,23 +21,11 @@
     <version>20180813</version>
 </dependency>
 
-<dependency>
-    <groupId>org.hibernate.javax.persistence</groupId>
-    <artifactId>hibernate-jpa-2.0-api</artifactId>
-    <version>1.0.1.Final</version>
-</dependency>
-
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>3.9</version>
-</dependency>
-
-<dependency>
-    <groupId>commons-fileupload</groupId>
-    <artifactId>commons-fileupload</artifactId>
-    <version>1.4</version>
-</dependency>
+<repository>
+    <id>in-project</id>
+    <name>In Project Repo</name>
+    <url>file://${project.basedir}/WEB-INF/libs</url>
+</repository>
 
 <dependency>
     <groupId>javax.websocket</groupId>
