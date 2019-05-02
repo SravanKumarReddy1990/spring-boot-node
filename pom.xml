@@ -24,8 +24,13 @@
 <repository>
     <id>in-project</id>
     <name>In Project Repo</name>
-    <url>${project.basedir}/src/main/webapp/WEB-INF/libs</url>
+    <url>${project.basedir}/src/main/webapp/WEB-INF/lib</url>
 </repository>
+<dependency>
+    <groupId>service-sdk</groupId>
+    <artifactId>service-sdk</artifactId>
+    <version>0.0.1</version>
+</dependency>
 
 <dependency>
     <groupId>javax.websocket</groupId>
