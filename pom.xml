@@ -10,7 +10,6 @@
     <tomcat.version>8.5.23</tomcat.version>
   </properties>
   	<dependencies>
-
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-annotations</artifactId>
@@ -23,14 +22,14 @@
     <version>5.4.2.Final</version>
 </dependency>
 <dependency>
-	<groupId>com.excel.Sample.ExcelAnn</groupId>
+	<groupId>com.excel.Sample</groupId>
 	<artifactId>example-app</artifactId>
 	<version>1.0</version>
 	<scope>system</scope>
 	<systemPath>${basedir}/lib/excelannotation.jar</systemPath>
 </dependency>
 <dependency>
-	<groupId>com.excel.Sample.ExcelAnn</groupId>
+	<groupId>com.mfcw.Sample</groupId>
 	<artifactId>example-app</artifactId>
 	<version>1.0</version>
 	<scope>system</scope>
