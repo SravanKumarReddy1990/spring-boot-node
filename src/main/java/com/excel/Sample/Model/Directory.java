@@ -5,17 +5,11 @@ import java.util.Date;
 
 import com.excel.Sample.ExcelAnn.ExcelColumn;
 
-
 public class Directory {
-	
 	private Integer id;
-
 	private String name;
-
 	private String path;
-
 	private String directory;
-
 	private Integer containedFiles;
 
 	private Date dateFormate;
