@@ -18,11 +18,9 @@
   <servlet>
   	<description>
   	</description>
-  	<display-name>
-  	FormSample</display-name>
+  	<display-name>FormSample</display-name>
   	<servlet-name>FormSample</servlet-name>
-  	<servlet-class>
-  	com.excel.Sample.Servlet.FormSample</servlet-class>
+  	<servlet-class>com.excel.Sample.Servlet.FormSample</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ExcelSample</servlet-name>
