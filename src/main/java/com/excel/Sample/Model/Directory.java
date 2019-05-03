@@ -6,7 +6,7 @@ import java.util.Date;
 import com.excel.Sample.ExcelAnn.ExcelColumn;
 
 public class Directory {
-	private Integer id;
+	
 	private String name;
 	private String path;
 	private String directory;
@@ -14,13 +14,7 @@ public class Directory {
 
 	private Date dateFormate;
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+	
 
 	@ExcelColumn(label = "Test Name")
 	public String getName() {

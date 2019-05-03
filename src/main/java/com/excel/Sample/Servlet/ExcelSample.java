@@ -17,6 +17,7 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import com.excel.Sample.Actions.ExcelAction;
+import com.excel.Sample.Actions.ExcelActionXssf;
 import com.excel.Sample.Model.Directory;
 
 /**
@@ -67,24 +68,24 @@ public class ExcelSample extends HttpServlet {
 				}
 				FileItem item = (FileItem) items.get(0);
 				try {
-					ExcelAction ea = new ExcelAction();
+					ExcelActionXssf ea = new ExcelActionXssf();
 					List<Directory> e = ea.readData(modelName, item
 							.getInputStream());
 					out.println("<table>");
 					for (int i = 1; i < e.size(); i++) {
 						Directory ex = (Directory) e.get(i);
 						
-						String date = new SimpleDateFormat("dd/MM/yyyy")
-								.format(ex.getDateFormate());
+						//String date = new SimpleDateFormat("dd/MM/yyyy")
+							//	.format(ex.getDateFormate());
 						out.println("<tr><td>" + ex.getContainedFiles()
 								+ " </td><td> " + ex.getDirectory()
 								+ " </td><td> " + ex.getPath() + " </td><td> "
-								+ ex.getName() + "</td><td> " + date
-								+ "</td></tr>");
+								+ ex.getName() + "</td><td> " + 
+								 "</td></tr>");
 					}
 					out.println("</table>");
 				} catch (Exception e) {
-					System.out.println(e);
+					System.out.println("Excel Sample : "+e);
 				}
 			}
 		} catch (Exception e) {
