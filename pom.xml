@@ -12,14 +12,6 @@
   	<dependencies>
 
 <dependency>
-	<groupId>com.excel.Sample</groupId>
-	<artifactId>example-app</artifactId>
-	<version>1.0</version>
-	<scope>system</scope>
-	<systemPath>${basedir}/lib/excelannotation.jar</systemPath>
-</dependency>
-
-<dependency>
     <groupId>commons-fileupload</groupId>
     <artifactId>commons-fileupload</artifactId>
     <version>1.3</version>
