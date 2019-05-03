@@ -32,6 +32,13 @@
 	<systemPath>${basedir}/lib/excelannotation.jar</systemPath>
 </dependency>
 <dependency>
+	<groupId>org.dom4j</groupId>
+	<artifactId>example-app</artifactId>
+	<version>1.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/dom4j-1.6.1.jar</systemPath>
+</dependency>
+<dependency>
 	<groupId>com.mfcw.Sample</groupId>
 	<artifactId>example-app</artifactId>
 	<version>1.0</version>
