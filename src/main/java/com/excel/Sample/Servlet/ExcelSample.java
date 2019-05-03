@@ -15,9 +15,7 @@ import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+
 
 import com.excel.Sample.Actions.ExcelAction;
 import com.excel.Sample.Model.Directory;
@@ -77,20 +75,7 @@ public class ExcelSample extends HttpServlet {
 					out.println("<table>");
 					for (int i = 1; i < e.size(); i++) {
 						Directory ex = (Directory) e.get(i);
-						Session session = HibernateUtil.getSessionFactory()
-								.openSession();
-						Transaction transaction = null;
-
-						try {
-							transaction = session.beginTransaction();
-							session.save(ex);
-							transaction.commit();
-						} catch (HibernateException exp) {
-							transaction.rollback();
-							exp.printStackTrace();
-						} finally {
-							session.close();
-						}
+						
 						String date = new SimpleDateFormat("dd/MM/yyyy")
 								.format(ex.getDateFormate());
 						out.println("<tr><td>" + ex.getContainedFiles()

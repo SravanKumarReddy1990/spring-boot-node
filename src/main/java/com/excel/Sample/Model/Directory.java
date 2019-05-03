@@ -1,32 +1,23 @@
 package com.excel.Sample.Model;
 
 import java.util.Date;
-import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
 
 import com.excel.Sample.ExcelAnn.ExcelColumn;
 
-@Entity
-@Table(name = "directory")
-public class Directory  implements Serializable{
-	@Id
-	@GeneratedValue
-	@Column(name = "id")
+
+public class Directory {
+	
 	private Integer id;
-	@Column(name = "Test_Name")
+
 	private String name;
-	@Column(name = "Path", nullable = false)
+
 	private String path;
-	@Column(name = "Directory", nullable = false)
+
 	private String directory;
-	@Column(name = "ContainedFiles", nullable = false)
+
 	private Integer containedFiles;
 
-	@Column(name = "DateFormate", nullable = false)
 	private Date dateFormate;
 
 	public Integer getId() {

@@ -1,15 +1,10 @@
 package com.excel.Sample.Model;
 
 import java.io.InputStream;
-import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 import com.mfcw.Sample.FormAnn.FormName;
 
-@Entity
-@Table(name = "directory")
-public class FormModel  implements Serializable{
+public class FormModel{
 	private String fname;
 	private String sname;
 	private String adress;
