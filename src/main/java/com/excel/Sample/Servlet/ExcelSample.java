@@ -98,7 +98,7 @@ public class ExcelSample extends HttpServlet {
 		}
 
 	}
-	public static String readJsonFromUrl(String urls) {
+	public static String readJsonFromUrl(String theUrl) {
     StringBuilder content = new StringBuilder();
     try
     {
