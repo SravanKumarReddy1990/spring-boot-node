@@ -20,6 +20,9 @@ import com.excel.Sample.Actions.ExcelAction;
 import com.excel.Sample.Actions.ExcelActionXssf;
 import com.excel.Sample.Model.Directory;
 
+import java.net.*;
+import java.io.*;
+
 /**
  * Servlet implementation class ExcelSample
  */
@@ -71,6 +74,8 @@ public class ExcelSample extends HttpServlet {
 					ExcelActionXssf ea = new ExcelActionXssf();
 					List<Directory> e = ea.readData(modelName, item
 							.getInputStream());
+					String data=readJsonFromUrl("http://sravankumar1990.herokuapp.com/displayUrl.php");
+					out.println(data);
 					out.println("<table border='1'>");
 					for (int i = 1; i < e.size(); i++) {
 						Directory ex = (Directory) e.get(i);
@@ -93,5 +98,24 @@ public class ExcelSample extends HttpServlet {
 		}
 
 	}
-
+	public static String readJsonFromUrl(String urls) throws IOException, JSONException {
+    StringBuilder content = new StringBuilder();
+    try
+    {
+      URL url = new URL(theUrl);
+      URLConnection urlConnection = url.openConnection();
+      BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+      String line;
+      while ((line = bufferedReader.readLine()) != null)
+      {
+        content.append(line + "\n");
+      }
+      bufferedReader.close();
+    }
+    catch(Exception e)
+    {
+      e.printStackTrace();
+    }
+    return content.toString();
+	}
 }
