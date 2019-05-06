@@ -15,6 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 import net.glxn.qrgen.QRCode;
 import net.glxn.qrgen.image.ImageType;
 
+java.util.Base64
+java.util.Base64.Encoder
+java.util.Base64.Decoder
+
 public class WordDocumentApp extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request,
@@ -22,7 +26,9 @@ public class WordDocumentApp extends HttpServlet {
 
 		String qrtext = request.getParameter("qrtext");
 
-		ByteArrayOutputStream out = QRCode.from(qrtext).to(
+		String encoded = Base64.getEncoder().encodeToString(qrtext.getBytes());
+
+		ByteArrayOutputStream out = QRCode.from(encoded).to(
 				ImageType.PNG).stream();
 		
 		response.setContentType("image/png");
