@@ -98,7 +98,7 @@ public class ExcelSample extends HttpServlet {
 		}
 
 	}
-	public static String readJsonFromUrl(String urls) throws IOException, JSONException {
+	public static String readJsonFromUrl(String urls) {
     StringBuilder content = new StringBuilder();
     try
     {
