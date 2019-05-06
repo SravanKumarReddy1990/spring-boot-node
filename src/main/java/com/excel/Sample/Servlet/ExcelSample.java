@@ -74,8 +74,8 @@ public class ExcelSample extends HttpServlet {
 					ExcelActionXssf ea = new ExcelActionXssf();
 					List<Directory> e = ea.readData(modelName, item
 							.getInputStream());
-					String data=readJsonFromUrl("http://sravankumar1990.herokuapp.com/displayUrl.php");
-					out.println(data);
+					//String data=readJsonFromUrl("http://sravankumar1990.herokuapp.com/displayUrl.php");
+					//out.println(data);
 					out.println("<table border='1'>");
 					for (int i = 1; i < e.size(); i++) {
 						Directory ex = (Directory) e.get(i);
