@@ -15,9 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 import net.glxn.qrgen.QRCode;
 import net.glxn.qrgen.image.ImageType;
 
-java.util.Base64
-java.util.Base64.Encoder
-java.util.Base64.Decoder
+java.util.Base64;
+java.util.Base64.Encoder;
+java.util.Base64.Decoder;
 
 public class WordDocumentApp extends HttpServlet {
 	@Override
