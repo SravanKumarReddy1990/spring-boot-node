@@ -26,7 +26,7 @@ public class WordDocumentApp extends HttpServlet {
 
 		String qrtext = request.getParameter("qrtext");
 
-		String encoded = Base64.getEncoder().encodeToString(qrtext.getBytes());
+		String encoded = Base64.getEncoder().encodeToString(qrtext.getBytes("utf-8"));
 
 		ByteArrayOutputStream out = QRCode.from(encoded).to(
 				ImageType.PNG).stream();
