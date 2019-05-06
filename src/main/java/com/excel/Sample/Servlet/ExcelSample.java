@@ -71,7 +71,7 @@ public class ExcelSample extends HttpServlet {
 					ExcelActionXssf ea = new ExcelActionXssf();
 					List<Directory> e = ea.readData(modelName, item
 							.getInputStream());
-					out.println("<table>");
+					out.println("<table border='1'>");
 					for (int i = 1; i < e.size(); i++) {
 						Directory ex = (Directory) e.get(i);
 						
