@@ -23,7 +23,8 @@ public class WordDocumentApp extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
+	try 
+        {
 		String qrtext = request.getParameter("qrtext");
 
 		//String text = "Hello World";
@@ -49,5 +50,10 @@ public class WordDocumentApp extends HttpServlet {
 
 		outStream.flush();
 		outStream.close();
+	}
+        catch(Exception e) 
+        {
+            e.printStackTrace();
+        }
 	}
 }
