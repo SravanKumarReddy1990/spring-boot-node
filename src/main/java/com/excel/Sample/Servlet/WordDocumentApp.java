@@ -15,9 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 import net.glxn.qrgen.QRCode;
 import net.glxn.qrgen.image.ImageType;
 
-import java.util.Base64;
-import java.util.Base64.Encoder;
-import java.util.Base64.Decoder;
+import java.security.Key;
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 
 public class WordDocumentApp extends HttpServlet {
 	@Override
@@ -26,9 +26,18 @@ public class WordDocumentApp extends HttpServlet {
 
 		String qrtext = request.getParameter("qrtext");
 
-		String encoded = Base64.getEncoder().encodeToString(qrtext.getBytes("utf-8"));
+		//String text = "Hello World";
+            String key = "Ba12345Br12345"; // 128 bit key
+            // Create key and cipher
+            Key aesKey = new SecretKeySpec(key.getBytes(), "AES");
+            Cipher cipher = Cipher.getInstance("AES");
+            // encrypt the text
+            cipher.init(Cipher.ENCRYPT_MODE, aesKey);
+            byte[] encrypted = cipher.doFinal(qrtext.getBytes());
+            System.err.println(new String(encrypted));
 
-		ByteArrayOutputStream out = QRCode.from(encoded).to(
+
+		ByteArrayOutputStream out = QRCode.from(new String(encrypted)).to(
 				ImageType.PNG).stream();
 		
 		response.setContentType("image/png");
