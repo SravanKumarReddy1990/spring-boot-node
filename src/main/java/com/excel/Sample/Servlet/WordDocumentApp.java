@@ -38,6 +38,11 @@ public class WordDocumentApp extends HttpServlet {
             System.err.println(new String(encrypted));
 
 
+		cipher.init(Cipher.DECRYPT_MODE, aesKey);
+            String decrypted = new String(cipher.doFinal(encrypted));
+            System.err.println(decrypted);
+
+
 		ByteArrayOutputStream out = QRCode.from(new String(encrypted)).to(
 				ImageType.PNG).stream();
 		
