@@ -28,7 +28,7 @@ public class WordDocumentApp extends HttpServlet {
 		String qrtext = request.getParameter("qrtext");
 
 		//String text = "Hello World";
-            String key = "Ba12345Br12345"; // 128 bit key
+            String key = "Bar12345Bar12345"; // 128 bit key
             // Create key and cipher
             Key aesKey = new SecretKeySpec(key.getBytes(), "AES");
             Cipher cipher = Cipher.getInstance("AES");
